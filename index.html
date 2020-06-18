@@ -84,6 +84,29 @@
         -ms-transform: translateX(40px);
         transform: translateX(40px);
       }
+
+      .footer {
+        border-top: 0.1pt solid #a0aec0;
+        width: 100%;
+      }
+
+      .text {
+        font-size: 11pt;
+        text-align: center;
+        color: #4a5568;
+        padding-top: 5px;
+      }
+
+      a {
+        color: #43aaa8;
+        text-decoration: none;
+        border-bottom: 1px solid #43aaa8;
+      }
+
+      a:hover {
+        color: white;
+        background-color: #43aaa8;
+      }
     </style>
   </head>
   <body>
@@ -93,19 +116,18 @@
     <figure class="lightstyle">
       <img src="lightoff.png" id="lightid1" >
       <figcaption>
-      <p> Light ON OFF </p>
       </figcaption>
     </figure>
     <figure class="lightstyle">
       <img src="lightoff.png" id="lightid2">
       <figcaption>
-      <p> Light ON OFF </p>
+      <p> Lights ON OFF </p>
       </figcaption>
     </figure>
     <figure class="lightstyle">
       <img src="lightoff.png" id="lightid3">
       <figcaption>
-      <p> Light ON OFF </p>
+      <p> Lights ON OFF </p>
       </figcaption>
     </figure>
     <figure class="lightstyle">
@@ -127,6 +149,27 @@
       onclick="tubelight()" > </span>
     </label>
     </div>
+    <div class="footer">
+      <h1 class="text">
+        Made with ❤️ by{" "}
+        <a
+          href="https://github.com/BodhaanshRavipati325/personal-website"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Bodhaansh Ravipati  
+        </a>
+        --
+        <a
+        href="https://www.linkedin.com/in/bodhaansh-ravipati-16515419b/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </h1>
+      <br>
+    </div>
     <script>
     const tubelight = () => {
       let btext = document.getElementById('bulbdata');
@@ -134,14 +177,14 @@
         let bid =document.getElementById('lightid'.concat(x));
         console.log(bid.src);
 
-        if(bid.src.match('lighton')){
+        if (bid.src.match('lighton')){
           bid.src="lightoff.png";
-          btext.innerHTML = "Light OFF";
+          btext.innerHTML = "Lights OFF";
           btext.style.color = "black";
         }
         else {
           bid.src="lighton.png";
-          btext.innerHTML = "Light ON";
+          btext.innerHTML = "Lights ON";
           btext.style.color = "red";
         }
       }
